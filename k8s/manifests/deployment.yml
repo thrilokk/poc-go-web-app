@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-web-app333
+  labels:
+    app: go-web-app333
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-web-app333
+  template:
+    metadata:
+      labels:
+        app: go-web-app333
+    spec:
+      containers:
+      - name: go-web-app333
+        image: thrilokkk/go-web-app:v1
+        ports:
+        - containerPort: 8080
